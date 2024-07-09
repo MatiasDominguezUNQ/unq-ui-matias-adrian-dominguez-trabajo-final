@@ -1,0 +1,26 @@
+.difficulty-button {
+    width: 6em;
+    height: 2.5em;
+    text-align: center;
+	box-shadow:inset 0px 1px 0px 0px #fce2c1;
+	background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+	background-color:#ffc477;
+    border-radius: var(--small-padding);
+	border:1px solid #eeb44f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+    font-family: var(--tux-fontFamilyHeading);
+    text-align: center;
+    font-weight: 700;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #cc9f52;
+}
+.difficulty-button:hover {
+	background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+	background-color:#fb9e25;
+}
+.difficulty-button:active {
+	position:relative;
+	top:1px;
+}

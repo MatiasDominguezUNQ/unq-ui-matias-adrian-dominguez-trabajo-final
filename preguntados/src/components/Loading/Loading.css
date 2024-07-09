@@ -1,0 +1,24 @@
+.loader {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50px;
+    aspect-ratio: 1;
+    align-content: center;
+    border-radius: 50%;
+    background: 
+      radial-gradient(farthest-side, var(--secondary-color-darker) 94%,#0000) top/8px 8px no-repeat,
+      conic-gradient(#0000 30%, var(--secondary-color-darker));
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+    animation: l13 1s infinite linear;
+  }
+
+  @keyframes l13{ 
+    100%{transform: rotate(1turn)}
+  }
+
+  .loader-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
