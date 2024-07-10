@@ -9,3 +9,22 @@
     align-items: center;
     gap: 1em;
 }
+
+.choose-text {
+    width: 16em;
+    height: 3em;
+    box-shadow: inset -1px -7px 11px 3px #5e9c28;
+    background: linear-gradient(to bottom, #89c403 5%, #77a809 100%);
+    background-color: #89c403;
+    border-radius: var(--small-padding);
+    border: 3px solid #74b807;
+    display: inline-block;
+    align-content: center;
+    color: #ffffff;
+    font-family: var(--tux-fontFamilyHeading);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0px 2px 1px #528009;
+    margin-bottom: 4em;
+}

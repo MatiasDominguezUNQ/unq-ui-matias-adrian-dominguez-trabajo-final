@@ -6,8 +6,8 @@
     align-content: center;
     border-radius: 50%;
     background: 
-      radial-gradient(farthest-side, var(--secondary-color-darker) 94%,#0000) top/8px 8px no-repeat,
-      conic-gradient(#0000 30%, var(--secondary-color-darker));
+      radial-gradient(farthest-side, rgb(44, 172, 172) 94%,#0000) top/8px 8px no-repeat,
+      conic-gradient(#0000 30%, rgb(44, 172, 172));
     -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
     animation: l13 1s infinite linear;
   }
