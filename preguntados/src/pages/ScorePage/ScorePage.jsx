@@ -22,7 +22,7 @@ const ScorePage = () => {
 
     return (
         <div className='score-page-container'>
-            <p className='score-text'>Your score for the {difficulty} difficulty is: {score}</p>
+            <p className='score-text'>Your final score for the {difficulty} difficulty is: {score}/10</p>
             <button onClick={onClick} className='play-button'>Play again?</button>
         </div>
     )

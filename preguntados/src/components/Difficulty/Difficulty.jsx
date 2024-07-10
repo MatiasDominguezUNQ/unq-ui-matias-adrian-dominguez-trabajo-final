@@ -1,6 +1,6 @@
 import './Difficulty.css'
 
-const Difficulty = ({ onClick, type }) => {
+const Difficulty = ({ onClick, type, index }) => {
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -11,7 +11,7 @@ const Difficulty = ({ onClick, type }) => {
   }
 
   return (
-    <button className="difficulty-button" onClick={handleClick}>
+    <button key={index} className="difficulty-button" onClick={handleClick}>
       {capitalizeFirstLetter(type)}
     </button>
   )

@@ -22,7 +22,7 @@ const NewGamePage = ({ notify }) => {
         } catch (error) {
             setDifficulties(null)
             setError(true)
-            notify("Ha ocurrido un error", notificationType.error)
+            notify("Ha ocurrido un error de conexión", notificationType.error)
         } finally {
             setIsLoading(false)
         }
@@ -33,7 +33,7 @@ const NewGamePage = ({ notify }) => {
     }
 
     useEffect(() => {
-        if(!isLoading && !error) {
+        if (!isLoading && !error) {
             deleteScore()
             reload()
         }
@@ -41,13 +41,13 @@ const NewGamePage = ({ notify }) => {
 
     return (
         <div className='new-game-page' >
-            {isLoading && <Loading/> }
+            {isLoading && <Loading />}
             {error && <ErrorMessage onRetry={reload} />}
             {difficulties && (
                 <>
                     <p className='choose-text'>Choose difficulty</p>
-                    {difficulties.map((difficulty) => (
-                        <Difficulty type={difficulty} onClick={onClick} />
+                    {difficulties.map((difficulty, index) => (
+                        <Difficulty key={index} type={difficulty} onClick={onClick} />
                     ))}
                 </>
             )}

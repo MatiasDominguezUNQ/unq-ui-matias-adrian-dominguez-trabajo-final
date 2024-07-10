@@ -24,11 +24,13 @@ const GamePage = ({ notify }) => {
         setError(false)
         try {
             const questions = await getQuestions(difficulty)
-            setAllQuestions(questions)
+            if(allQuestions.length === 0) {
+                setAllQuestions(questions)
+            }
         } catch (error) {
             setCurrentQuestion(null)
             setError(true);
-            notify("Ha ocurrido un error", notificationType.error);
+            notify("Ha ocurrido un error de conexión", notificationType.error);
         } finally {
             setIsLoading(false)
         }
@@ -49,10 +51,7 @@ const GamePage = ({ notify }) => {
     }
 
     const nextQuestion = () => {
-        console.log("nextQuestion")
-        console.log(allQuestions)
         setCurrentQuestion(allQuestions.pop())
-        console.log(currentQuestion)
     }
 
     useEffect(() => {
