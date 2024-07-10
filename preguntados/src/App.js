@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import GamePage from "./pages/GamePage/GamePage";
 import 'react-toastify/dist/ReactToastify.css';
 import "./App.css";
+import ScorePage from "./pages/ScorePage/ScorePage";
 
 function App() {
   const notify = (message, type) => { type(message) }
@@ -19,6 +20,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/newGame" element={<NewGamePage notify={notify} />} />
           <Route path="/play" element={<GamePage notify={notify} />} />
+          <Route path="/score" element={<ScorePage/>} />
           <Route path="*" element={<Navigate to="/home" />} />
         </Routes>
       </Template>

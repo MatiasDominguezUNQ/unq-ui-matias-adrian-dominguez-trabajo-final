@@ -6,6 +6,7 @@ import ErrorMessage from '../../components/ErrorMessage/ErrorMessage.jsx';
 import Difficulty from '../../components/Difficulty/Difficulty.jsx';
 import Loading from '../../components/Loading/Loading.jsx';
 import './NewGamePage.css'
+import { deleteScore } from '../../helpers/scoreDAO.js';
 
 const NewGamePage = ({ notify }) => {
     const navigator = useNavigate()
@@ -19,6 +20,7 @@ const NewGamePage = ({ notify }) => {
         try {
             setDifficulties(await getDifficulty())
         } catch (error) {
+            setDifficulties(null)
             setError(true)
             notify("Ha ocurrido un error", notificationType.error)
         } finally {
@@ -31,7 +33,10 @@ const NewGamePage = ({ notify }) => {
     }
 
     useEffect(() => {
-        reload()
+        if(!isLoading && !error) {
+            deleteScore()
+            reload()
+        }
     }, [])
 
     return (
