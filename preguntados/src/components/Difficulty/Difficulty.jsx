@@ -1,12 +1,15 @@
 import './Difficulty.css'
 
 const Difficulty = ({ onClick, type }) => {
-    return (
-      <button className="difficulty-button" onClick={onClick}>
-          {type}
-      </button>
-    )
+  const handleClick = () => {
+    onClick(type);
   }
-  
-  export default Difficulty
-  
+
+  return (
+    <button className="difficulty-button" onClick={handleClick}>
+      {type}
+    </button>
+  )
+}
+
+export default Difficulty

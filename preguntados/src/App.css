@@ -1,74 +1,19 @@
 @import './normalize.css';
 
 html, body {
-  overflow: hidden;
   height: 100%;
   width: 100%;
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 :root {
-  --main-color: #FE2C55;
-  --main-color-light: #FFEFF2;
-  --main-color-light-darker: #FFDDE3;
-  --main-color-dark: #d82649  ;
-  --secondary-color: #E7E7E8;
-  --secondary-color-lighter: #F8F8F8;
-  --secondary-color-light: #F1F1F2;
-  --secondary-color-dark: #B0B0B4;
-  --secondary-color-darker: #AAAAAE;
-  --primary-contrast: #2B5DB9;
-  --secondary-contrast: #161823;
-
   --small-padding: 15px;
   --medium-padding: 0.3em;
 
   --tux-fontFamilyHeading: 'Montserrat', sans-serif;
   --tux-fontFamilyParagraph: 'Montserrat', sans-serif;
-  --tux-fontWeightRegular: 400;
-  --tux-fontWeightSemibold: 500;
-  --tux-fontWeightBold: 700;
-  --tux-fontSizeH1: 96px;
-  --tux-fontSizeH2: 72px;
-  --tux-fontSizeH3: 56px;
-  --tux-fontSizeH4: 48px;
-  --tux-fontSizeH5: 32px;
-  --tux-fontSizeH6: 24px;
-  --tux-fontSizeH7: 18px;
-  --tux-fontSizeP1: 24px;
-  --tux-fontSizeP2: 18px;
-  --tux-fontSizeP3: 16px;
-  --tux-fontSizeP4: 14px;
-  --tux-fontSizeP5: 12px;
 }
 
 * {
   font-family: "Times New Roman", Times, serif;
   box-sizing: border-box;
-}
-
-input:focus {
-  outline: none;
-}
-
-input {
-  caret-color: var(--main-color);
-}
-
-hr {
-  border-color: var(--secondary-color-lighter);
-  border-width: 1px;
-  width: 100%;
-  border-style: solid;
-}
-
-main {
-  overflow-y: auto;
 }
